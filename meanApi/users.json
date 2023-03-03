@@ -1,0 +1,340 @@
+[{
+  "_id": {
+    "$oid": "633537cb71496c5f7cbe68d8"
+  },
+  "email": "twinklepurohitjd6@gmail.com",
+  "password": "$2b$10$KcgufYtTshd5RVHAPS1L6ODlfOij758kRvLdcRxIjeX1FXZca.Tiq",
+  "firstname": "Twinkle",
+  "lastname": "Purohit",
+  "mob": "9799914487",
+  "xgen": "Female",
+  "city": "Mumbai",
+  "dob": {
+    "$date": {
+      "$numberLong": "1662595200000"
+    }
+  },
+  "image": "japan.jpeg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664432075731"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664518331769"
+    }
+  },
+  "__v": 0,
+  "role": "Admin"
+},{
+  "_id": {
+    "$oid": "63355a9f11ae72138391dcce"
+  },
+  "email": "yash@gmail.com",
+  "password": "$2b$10$sKv8leHKQdx3I8I2IcSoDOHXc7WRaCz/wOVdHhBv5g8vbPeyGwjYa",
+  "firstname": "Yash",
+  "lastname": "Kalla",
+  "mob": {
+    "$numberLong": "7894561230"
+  },
+  "xgen": "Male",
+  "city": "Mumbai",
+  "role": "Tester",
+  "dob": {
+    "$date": {
+      "$numberLong": "1662595200000"
+    }
+  },
+  "image": "apple.jpg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664440991802"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552931487"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6336eb2a63a05efcfa7711e5"
+  },
+  "email": "twinkle1234@gmail.com",
+  "password": "$2b$10$gr7parPi3NYHhgziBCIvwuCQGbV1Rvh387O06yVgZr8c20EyvXAym",
+  "firstname": "Twinkle",
+  "lastname": "jain",
+  "mob": "9788814487",
+  "xgen": "Female",
+  "city": "Mumbai",
+  "role": "User",
+  "dob": {
+    "$date": {
+      "$numberLong": "847238400000"
+    }
+  },
+  "image": "india.jpeg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664543530890"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664881932011"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633aba065de5bd09cb156ce7"
+  },
+  "email": "riya@gmail.com",
+  "password": "$2b$10$Xij0un9OIQkeRPUBesiLjuMKD626rDnalD2TPmq7hZNtyMdyNq23W",
+  "firstname": "riya",
+  "lastname": "jain",
+  "mob": {
+    "$numberLong": "3216549870"
+  },
+  "xgen": "Female",
+  "city": "Jaipur",
+  "role": "User",
+  "dob": {
+    "$date": {
+      "$numberLong": "943228800000"
+    }
+  },
+  "image": "glow_bulb.gif",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664793094572"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552966717"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633c14aa8b11d7ad857db16d"
+  },
+  "email": "hitesh@gmail.com",
+  "password": "$2b$10$p6PY0YS0C3BEjyfF5SAtEeVsXnFSmJVgxa1GtqDeeKmQUX6DWAn/W",
+  "firstname": "Hitesh",
+  "lastname": "Solanki",
+  "mob": {
+    "$numberLong": "9799914487"
+  },
+  "xgen": "Male",
+  "city": "Mumbai",
+  "role": "Developer",
+  "dob": {
+    "$date": {
+      "$numberLong": "950227200000"
+    }
+  },
+  "image": "bulb.gif",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664881834765"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552949511"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633c1b969bb80617d3d037db"
+  },
+  "email": "twinklepurohit@gmail.com",
+  "password": "$2b$10$74SsVNE1sDsO6ld1o1I/sOyqj2QhZ352an09lwJFm6UHfgp6WnB3y",
+  "firstname": "Twinkle",
+  "lastname": "Purohit",
+  "mob": "9799914487",
+  "xgen": "Female",
+  "city": "Jodhpur",
+  "role": "Admin",
+  "dob": {
+    "$date": {
+      "$numberLong": "848620800000"
+    }
+  },
+  "image": "india.jpeg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664883606425"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664883606425"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6343a550c493f53308f9605f"
+  },
+  "email": "rohan@gmail.com",
+  "password": "$2b$10$IgaxhsEf4mwenG6ocgDOS.IP.FS4F5xp1rT64Je7P5lxo2vTyrS8y",
+  "firstname": "rohan",
+  "lastname": "jain",
+  "mob": {
+    "$numberLong": "97888456123"
+  },
+  "xgen": "Male",
+  "city": "Jodhpur",
+  "role": "User",
+  "dob": {
+    "$date": {
+      "$numberLong": "943228800000"
+    }
+  },
+  "image": "iphone.jpg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665377616400"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552959359"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6343a62c02b88776cbad18a3"
+  },
+  "email": "ankit@gmail.com",
+  "password": "$2b$10$oEzLR3FB.V1Zzu5GKnOR3.NN9VGB1qTjbnO7XQfMJo0tkdlv8J6bK",
+  "firstname": "Ankit",
+  "lastname": "Sain",
+  "mob": "3216549870",
+  "xgen": "Male",
+  "city": "Delhi",
+  "role": "Admin",
+  "dob": {
+    "$date": {
+      "$numberLong": "975974400000"
+    }
+  },
+  "image": "nepal.jpeg",
+  "otp": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665377836329"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665488381794"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "634649a889d1e30d22305659"
+  },
+  "email": "rajesh@gmail.com",
+  "password": "$2b$10$QXwA5oThelKsySKDwQTTPOVmp9EvDGSbSpn5qMQMqQbiDKrQ9YMhS",
+  "firstname": "Rajesh",
+  "lastname": "Purohit",
+  "mob": 979998852,
+  "xgen": "Male",
+  "city": "Mumbai",
+  "role": "User",
+  "dob": {
+    "$date": {
+      "$numberLong": "1296777600000"
+    }
+  },
+  "image": "small_flower.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665550760714"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552984259"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "634651e989d1e30d223056b5"
+  },
+  "email": "neha@gmail.com",
+  "password": "$2b$10$AvsR9jcCRAZPxP9amB8.huKYuUqTjBWu5GeLf8j/YqpOe9zYPkJk.",
+  "firstname": "neha",
+  "lastname": "bohra",
+  "mob": {
+    "$numberLong": "3216549872"
+  },
+  "xgen": "Female",
+  "city": "Mumbai",
+  "role": "Developer",
+  "dob": {
+    "$date": {
+      "$numberLong": "946771200000"
+    }
+  },
+  "image": "tick.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665552873230"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665552975699"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636222af8b2e243917eaf487"
+  },
+  "email": "liza@gamil.com",
+  "password": "$2b$10$IXZLFXh.ri5BogkqrIdqhuITkLgkean9Ko2BLq3rsi62jE10C/ZQS",
+  "firstname": "Liza",
+  "lastname": "Shaah",
+  "mob": {
+    "$numberLong": "9799914487"
+  },
+  "xgen": "Female",
+  "city": "Jodhpur",
+  "role": "User",
+  "dob": {
+    "$date": {
+      "$numberLong": "846892800000"
+    }
+  },
+  "image": "small_flower.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667375791264"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667375791264"
+    }
+  },
+  "__v": 0
+}]

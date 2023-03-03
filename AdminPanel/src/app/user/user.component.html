@@ -1,0 +1,157 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2 *ngIf="isAdd" class="title">Add User Form</h2>
+                        <h2 *ngIf="!isAdd" class="title">Edit User Form </h2>
+                    </div>
+                    <div class="content">
+                        <form [formGroup]="registerForm" (ngSubmit)="registerUser();">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your First name"
+                                            formControlName="firstname">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.firstname">
+                                              <p *ngIf="registerForm.get('firstname').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your Last name"
+                                            formControlName="lastname">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.lastname">
+                                              <p *ngIf="registerForm.get('lastname').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter your email"
+                                            formControlName="email">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.email">
+                                              <p *ngIf="registerForm.get('email').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Mobile Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter your cmobile number"
+                                            formControlName="mob">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.mob">
+                                              <p *ngIf="registerForm.get('mob').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Date Of Birth</label>
+                                        <input type="date" class="form-control" 
+                                            formControlName="dob">
+                                    </div> 
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.dob">
+                                              <p *ngIf="registerForm.get('dob').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter your password"
+                                            formControlName="password">
+                                    </div>
+                                        <ng-container *ngIf="submitted">
+                                            <ng-container *ngFor="let v of validationMessages.password">
+                                                <p *ngIf="registerForm.get('password').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                            </ng-container>
+                                        </ng-container>
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter your confirm Password"
+                                            formControlName="confirmPassword">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.confirmPassword">
+                                              <p *ngIf="registerForm.get('confirmPassword').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group d-flex">
+                                        <label>Gender</label>
+                                        <div>
+                                            <input type="radio" 
+                                            formControlName="xgen" id="rd1" value="Male"><label>Male</label>
+                                            <input type="radio" 
+                                        formControlName="xgen" id="rd2" value="Female"><label>Female</label>
+                                        </div>
+                                     
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.xgen">
+                                              <p *ngIf="registerForm.get('xgen').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        <select formControlName="xcity" class="form-control">
+                                            <option value='null' selected>Select City</option>
+                                            <option value="Jaipur">Jaipur</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Jodhpur">Jodhpur</option>
+                                            <option value="Delhi">Delhi</option>
+                                          </select>
+                                    </div>
+
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.xcity">
+                                              <p *ngIf="registerForm.get('xcity').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>User Role</label>
+                                        <select formControlName="role" class="form-control">
+                                            <option value="null" selected>Select Role</option>
+                                            <option value="Admin">Admin</option>
+                                            <option value="Developer">Developer</option>
+                                            <option value="Tester">Tester</option>
+                                          </select>
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.role">
+                                              <p *ngIf="registerForm.get('role').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file" class="form-control" 
+                                            formControlName="file" (change)="onFileSelected($event)">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.file">
+                                              <p *ngIf="registerForm.get('file').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                </div>
+                                
+                            </div>
+                            <input type="submit" *ngIf="isAdd" value="Insert" class="btn btn-info btn-fill pull-right" />
+                            <input type="submit" *ngIf="!isAdd" value="Update" class="btn btn-info btn-fill pull-right" />
+
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

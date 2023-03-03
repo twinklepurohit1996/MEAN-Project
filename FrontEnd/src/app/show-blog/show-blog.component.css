@@ -1,0 +1,48 @@
+.test {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .read {
+    display: block;
+    width: 300px;
+  
+    padding: 5px;
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    text-align: justify;
+  }
+  
+  .pp {
+    margin: 0 0 4px;
+  }
+  
+  .show-less {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  i {
+    
+    color:rgb(19, 18, 18);
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 650px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+  }
+  
+  .show-scroll {
+    opacity: 1;
+  }
+  

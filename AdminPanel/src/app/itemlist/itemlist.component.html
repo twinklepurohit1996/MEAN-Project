@@ -1,0 +1,43 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <div class="col-sm-6"><h4 class="title">Item List</h4></div>
+                        <div class="col-sm-6">  <button class="btn btn-danger categories" style="float:right;" routerLink="/itemForm">Add Item</button></div>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                          <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Item Name</th>
+                                        <th>Item Image</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Description</th>
+                                        <th>Categories Name</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of itemData; let i = index" [attr.data-index]="i">
+                                        <td>{{i+1}}</td>
+                                        <td>{{item.item_name}}</td>
+                                        <td><img class="avatar border-gray" width="45px" height="45px" style="border-radius:50%;" src="{{item?.file}}"
+                                            alt="Item Image" /></td>
+                                        <td>{{item.price}}</td>
+                                        <td>{{item.qnty}}</td>
+                                        <td>{{item.des}}</td>
+                                        <td>{{item.cate_Id.cate_name}}</td>
+                                        <td role="button"><i class="fa fa-edit" [routerLink]="['/itemForm',item._id]"></i></td>
+                                        <td role="button"><i class="fa fa-trash" (click)="deleteItem(item._id)"></i></td>
+                                       </tr>
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>

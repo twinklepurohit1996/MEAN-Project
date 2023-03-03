@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="form_wrapper">
+          <div class="form_container">
+            <div class="title_container">
+              <h2>Login Form</h2>
+            </div>
+            <div class="row clearfix">
+              <div class="">
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser();">
+                  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                    <input type="email" formControlName="email" placeholder="Email"  />
+                  </div>
+                  <div>
+                    <p class="text-danger" *ngIf="submitted && loginFormControl.email.errors?.required">
+                      Email is required
+                    </p>
+                    <p class="text-danger" *ngIf="submitted && loginFormControl.email.errors?.email">
+                      Enter a valid email address
+                    </p>
+                  </div>
+                  <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input type="password" formControlName="password" placeholder="Password"/>
+                  </div>
+                  <div>
+                    <p class="text-danger" *ngIf="submitted && loginFormControl.password.errors?.required">
+                      Password is required
+                    </p>
+                  </div>
+                  <input class="button" type="submit" value="Login"/>
+                  <!-- <div class="text-center text-dark">
+                    <label for="cb1"><a routerLink="/fpass">Forget Password</a></label>
+                  </div> -->
+                  <div class="text-center">
+                    <label for="cb1"><a routerLink="/register">Register Here</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="login">
+        <h1>{{title}}</h1>
+        <form #loginForm="ngForm" (ngSubmit)=user(loginForm.value)>
+            <div class="email">
+                <i class="fa fa-user"></i>
+                <input type="email" placeholder="Email" name="email" ngModel />
+            </div>
+            <div class="password">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="Password" name="password" ngModel/>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Login" class="btn" />
+                <br>
+                <a class="text-muted text-center" routerLink="/fpass">Forgot password?</a>
+                <br>
+                <p class="mb-0 me-2"><b>Don't have an account?</b></p>
+                <button type="button" class="btn">
+                    <a routerLink="/register" class="text-white text-decoration-none">Register</a>
+                </button>
+            </div>
+        </form>
+      </div>
+    </div> -->
+  </body>
+</html>

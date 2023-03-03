@@ -1,0 +1,96 @@
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned ">
+  <div class="container">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/landing']">
+      <img src="./assets/img/brand/argon-white.png">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/home']">
+              <img src="./assets/img/brand/blue.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+                  [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" [routerLink]="''" fragment="landing"  >
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" style="cursor: pointer;">Home</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" style="cursor: pointer;" [routerLink]="''" fragment="blog" >Blog</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text"  [routerLink]="''" fragment="feedback" style="cursor: pointer;">Testimonial</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" [routerLink]="''" fragment="contact" style="cursor: pointer;">Contact Us</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="isUserLoggedIn">
+          <a class="nav-link no-caret" [routerLink]="['/user-profile']" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" style="cursor: pointer;">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="isUserLoggedIn">
+          <a class="nav-link no-caret" [routerLink]="['/feedback']" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" style="cursor: pointer;">Feedback</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text" style="cursor: pointer;">Categories</span>
+          </a>
+          <div class="dropdown-menu-xl dropdown-menu" >
+            <div class="dropdown-menu-inner" *ngFor="let cate of cateData ; let i = index" [attr.data-index]="i">
+              <a [routerLink]="['/itemDisplay',cate._id]" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                  <i class="ni ni-spaceship"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="heading text-primary mb-md-1">{{cate.cate_name}}</h6>
+                </div> 
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a [routerLink]="['/login']" *ngIf="!isUserLoggedIn"  class="btn btn-neutral btn-icon">
+            <span class="nav-link-inner--text" style="cursor: pointer;">Login/Register</span>
+          </a>
+          
+          <a class="btn btn-neutral btn-icon" *ngIf="isUserLoggedIn">
+            <span class="nav-link-inner--text" (click)="logout()" style="cursor: pointer;" >Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

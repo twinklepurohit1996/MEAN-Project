@@ -1,0 +1,90 @@
+<main class="profile-page">
+  <section class="section-profile-cover section-shaped my-0">
+    <div class="shape shape-style-1 shape-primary alpha-4">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="separator separator-bottom separator-skew">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="card card-profile shadow mt--300">
+        <div class="px-4 text-center">
+
+          <h4 class="mt-5">Feedback Form</h4>
+
+          <form [formGroup]="feedbackForm" (ngSubmit)="feedback();">
+            <div class="form-group mt-5" [ngClass]="{'focused':focus===true}">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                </div>
+                <input class="form-control" placeholder="Your name" type="text" formControlName="username"
+                  (focus)="focus=true" (blur)="focus=false">
+              </div>
+              <ng-container *ngIf="submitted">
+                <ng-container *ngFor="let v of validationMessages.username">
+                  <p *ngIf="feedbackForm.get('username').hasError(v.type)" class="text-danger" [innerText]="v.message">
+                  </p>
+                </ng-container>
+              </ng-container>
+            </div>
+            <div class="form-group" [ngClass]="{'focused':focus1===true}">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                </div>
+                <input class="form-control" placeholder="rating" type="number" formControlName="rating"
+                  (focus)="focus1=true" (blur)="focus1=false">
+              </div>
+              <ng-container *ngIf="submitted">
+                <ng-container *ngFor="let v of validationMessages.rating">
+                  <p *ngIf="feedbackForm.get('rating').hasError(v.type)" class="text-danger" [innerText]="v.message">
+                  </p>
+                </ng-container>
+              </ng-container>
+            </div>
+            <div class="form-group mb-4">
+              <textarea class="form-control form-control-alternative" formControlName="feedback" rows="4" cols="80"
+                placeholder="Type a feedback..."></textarea>
+              <ng-container *ngIf="submitted">
+                <ng-container *ngFor="let v of validationMessages.feedback">
+                  <p *ngIf="feedbackForm.get('feedback').hasError(v.type)" class="text-danger" [innerText]="v.message">
+                  </p>
+                </ng-container>
+              </ng-container>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-default btn-round btn-block btn-lg">Send Feedback</button>
+            </div>
+          </form>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
+  <div class="container">
+    <div class="row row-grid align-items-center" [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
+      <div class="col-lg-6">
+        <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
+        <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+      </div>
+    </div>
+    <hr>
+  </div>
+</footer>

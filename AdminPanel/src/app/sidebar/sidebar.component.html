@@ -1,0 +1,36 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a routerLink="dashboard" class="simple-text">
+            <div class="logo-img">
+                <img src="/assets/img/angular2-logo-white.png"/>
+            </div>
+            Welcome
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+        <li *ngIf="isMobileMenu()">
+            <a routerLink="/userdetails">
+                <img class="avatar border-gray"  style="border-radius:50%;" width="35px" height="35px" src="{{jwtData?.image}}"
+                alt="userImage" />
+            </a>
+        </li>
+        <li *ngIf="isMobileMenu()">
+            <a routerLink="/userdetails">
+                <p class="title">{{jwtData?.firstname}} {{jwtData?.lastname}}</p> 
+            </a>
+        </li>
+        <li *ngIf="isMobileMenu()">
+            <i class="fa fa-globe"></i>
+            <a routerLink="/userdetails">
+               <p>Account</p>
+            </a>
+        </li>
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

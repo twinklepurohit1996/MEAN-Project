@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "633ae13ce8f3e3fc34323792"
+  },
+  "title": "Java Technology",
+  "des": "Java is a widely used object-oriented programming language and software platform that runs on billions of devices, including notebook computers, mobile devices, gaming consoles, medical devices and many others. The rules and syntax of Java are based on the C and C++ languages.",
+  "author": "Prachi Parihar",
+  "image": "japan.jpeg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664803132960"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665035643782"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633ae2c07cea51abb6944628"
+  },
+  "title": "Android Development",
+  "des": "Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets.",
+  "author": "Bhawan jain",
+  "image": "usa.jpeg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664803520419"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665035596687"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633bfd23fb0042f856d59ac5"
+  },
+  "title": "Cloud Computing",
+  "des": "It is a new technology .Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each location being a data center",
+  "author": "Kapil Java",
+  "image": "glow_bulb.gif",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664875811346"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665553681984"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633c062f1785dcc6021097bb"
+  },
+  "title": "Machine Learning",
+  "des": "Arthur Samuel, a pioneer in the field of artificial intelligence and computer gaming, coined the term “Machine Learning”. He defined machine learning as – a “Field of study that gives computers the capability to learn without being explicitly programmed”. In a very layman’s manner, Machine Learning(ML) can be explained as automating and improving the learning process of computers based on their experiences without being actually programmed i.e. without any human assistance. The process starts with feeding good quality data and then training our machines(computers) by building machine learning models using the data and different algorithms. ",
+  "author": "Twinkle Purohit",
+  "image": "india.jpeg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664878127456"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664878151772"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633c10aa8b11d7ad857db150"
+  },
+  "title": "IP Address",
+  "des": "To access a website, you need to know its Internet Protocol (IP) address. An IP address is a unique string of numbers. Each device has an IP address to distinguish itself from the billions of websites and devices connected via the Internet.The IP address for HubSpot is 104.16.249.5. You can find any website’s IP address by visiting a site like Site 24x7 or by using Command Prompt on Windows or Network Utility > Traceroute on MacBooks.",
+  "author": "Yash Bohra",
+  "image": "small_flower.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664880810957"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665553644017"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633e6b5ca3aab5e27ad7b026"
+  },
+  "title": "Web Development",
+  "des": "Websites are files stored on servers, which are computers that host (fancy term for “store files for”) websites. These servers are connected to a giant network called the Internet. Browsers are computer programs that load websites via your Internet connection, such as Google Chrome or Internet Explorer, while the computers used to access these websites are known as “clients”.To access a website, you need to know its Internet Protocol (IP) address. An IP address is a unique string of numbers. .",
+  "author": "Jiya Jain",
+  "image": "tick.jpg",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665035100154"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665553663517"
+    }
+  },
+  "__v": 0
+}]

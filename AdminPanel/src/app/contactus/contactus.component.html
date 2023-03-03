@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]="filterForm" (ngSubmit)="showContact()">
+                    <div class="col-lg-8"></div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="search" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Filter</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <div class="card">
+                    <div class="header">
+                        <div class="col-sm-6">
+                            <h4 class="title">Contact Us List</h4>
+                        </div>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Title</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of userInfo; let i = index" [attr.data-index]="i">
+                                    <td>{{i+1}}</td>
+                                    <td>{{user.name}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.message}}</td>
+                                    <td>{{user.title}}</td>
+                                    <td role="button"><i class="fa fa-trash" (click)="deleteContact(user._id)"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

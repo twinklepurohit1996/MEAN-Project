@@ -1,0 +1,185 @@
+[{
+  "_id": {
+    "$oid": "63357a4cd42216a85903d5ea"
+  },
+  "item_name": "Nokia 2022",
+  "file": "india.jpeg",
+  "des": "Ram: 2GB",
+  "price": "2000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "633577f821d3906dc6f7cf39"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664449100811"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470159243"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633ed2a98b3e9e92a617b04f"
+  },
+  "item_name": "Iphone 14",
+  "file": "japan.jpeg",
+  "des": "Ram:16Gb , Storage : 128 GB",
+  "price": "89000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "633577f821d3906dc6f7cf39"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665061545921"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470240624"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63450f5be0deb2b15a2644a8"
+  },
+  "item_name": "Sumsung Galaxy  A71",
+  "file": "france.jpeg",
+  "des": "Ram: 6GB , Android",
+  "price": "30000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "633577f821d3906dc6f7cf39"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665470299772"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470299772"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63450f88e0deb2b15a2644b1"
+  },
+  "item_name": "Asus",
+  "file": "japan.jpeg",
+  "des": "It is a very goo system",
+  "price": "55000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "633577f221d3906dc6f7cf33"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665470344370"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470344370"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63450fc4e0deb2b15a2644ba"
+  },
+  "item_name": "Mac Book",
+  "file": "apple.jpg",
+  "des": "ISO Technology , MackBook Laptop",
+  "price": "105000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "633577f221d3906dc6f7cf33"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665470404682"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470404682"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63450ff1e0deb2b15a2644c3"
+  },
+  "item_name": "Titan",
+  "file": "small_flower.jpg",
+  "des": "Titan is a brand of Tata Group",
+  "price": "5000",
+  "qnty": "1",
+  "cate_Id": {
+    "$oid": "63450d88740a5d78bb133f75"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665470449822"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665470449822"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6346549489d1e30d2230570c"
+  },
+  "item_name": "Casio",
+  "file": "iphone.jpg",
+  "des": "It is a very good watch",
+  "price": 1000,
+  "qnty": 1,
+  "cate_Id": {
+    "$oid": "63450d88740a5d78bb133f75"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665553556802"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665553556802"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "634654d789d1e30d22305715"
+  },
+  "item_name": "realme Q21",
+  "file": "apple.jpg",
+  "des": "ram:4Gb , AI Features",
+  "price": 20000,
+  "qnty": 1,
+  "cate_Id": {
+    "$oid": "633577f821d3906dc6f7cf39"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665553623117"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665553623117"
+    }
+  },
+  "__v": 0
+}]

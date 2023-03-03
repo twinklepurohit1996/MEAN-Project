@@ -1,0 +1,54 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <div class="col-sm-6"><h4 class="title">User List</h4></div>
+                        <div class="col-sm-6">  <button class="btn btn-danger categories" style="float:right;" routerLink="/user">Add User</button></div>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                          <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Date of Birth</th>
+                                        <th>Email</th>
+                                        <th>Mobile Number</th>
+                                        <th>Gender</th>
+                                        <th>City</th>
+                                        <th>User Role</th>
+                                        <th>Image</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let user of userInfo; let i = index" [attr.data-index]="i">
+                                        <td>{{i+1}}</td>
+                                        <td>{{user.firstname}}</td>
+                                        <td>{{user.lastname}}</td>
+                                        <td>{{user.dob}}</td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.mob}}</td>
+                                        <td>{{user.xgen}}</td>
+                                        <td>{{user.city}}</td>
+                                        <td>{{user.role}}</td>
+                                        <td>
+                                            <img class="avatar border-gray" width="45px" height="45px" style="border-radius:50%;"  src="{{user.image}}"
+                                            alt="User Image" />
+                                        </td>
+                                        <td role="button"><i class="fa fa-edit" [routerLink]="['/user',user._id]"></i></td>
+                                        <td role="button"><i class="fa fa-trash" (click)="deleteUser(user._id)"></i></td>
+                                       </tr>
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

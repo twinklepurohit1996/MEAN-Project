@@ -1,0 +1,218 @@
+<main>
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-default">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-body px-lg-5 ">
+              <div class="text-center text-muted mb-4">
+                <small>Or sign up with credentials</small>
+              </div>
+              <form role="form" [formGroup]="registerForm" (ngSubmit)="registerUser();">
+                <div class="row">
+
+
+                  <div class="col-sm-6">
+                    <div class="form-group" [ngClass]="{'focused':focus===true}">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="firstname" formControlName="firstname" type="text"
+                          (focus)="focus=true" (blur)="focus=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.firstname">
+                          <p *ngIf="registerForm.get('firstname').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus===true}">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="lastname" formControlName="lastname" type="text"
+                          (focus)="focus=true" (blur)="focus=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.lastname">
+                          <p *ngIf="registerForm.get('lastname').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Email" type="email" formControlName="email"
+                          (focus)="focus1=true" (blur)="focus1=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.email">
+                          <p *ngIf="registerForm.get('email').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="password" type="password" formControlName="password"
+                          (focus)="focus1=true" (blur)="focus1=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.password">
+                          <p *ngIf="registerForm.get('password').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus1===true}">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Confirm password" type="password"
+                          formControlName="confirmPassword" (focus)="focus1=true" (blur)="focus1=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.confirmPassword">
+                          <p *ngIf="registerForm.get('confirmPassword').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-6">
+
+                    <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Mobile Number" type="number" formControlName="mob"
+                          (focus)="focus2=true" (blur)="focus2=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.mob">
+                          <p *ngIf="registerForm.get('mob').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Date OF Birth" type="date" formControlName="dob"
+                          (focus)="focus2=true" (blur)="focus2=false">
+                      </div>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.dob">
+                          <p *ngIf="registerForm.get('dob').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-album-2"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Image Upload" type="file" formControlName="file"
+                          (change)="onFileSelected($event)" (focus)="focus2=true" (blur)="focus2=false">
+                      </div>
+
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.file">
+                          <p *ngIf="registerForm.get('file').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group d-flex pt-3 pb-2" [ngClass]="{'focused':focus2===true}">
+                      <div class="custom-control custom-radio ">
+                        <input name="custom-radio-1" class="custom-control-input" formControlName="xgen" id="rd1"
+                          value="Male" type="radio">
+                        <label class="custom-control-label" for="rd1">
+                          <span>Male</span>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio mx-5">
+                        <input name="custom-radio-1" class="custom-control-input" formControlName="xgen" id="rd2"
+                          value="Female" checked type="radio">
+                        <label class="custom-control-label" for="rd2">
+                          <span>Female</span>
+                        </label>
+                      </div>
+                      <br>
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.xgen">
+                          <p *ngIf="registerForm.get('xgen').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-building"></i></span>
+                        </div>
+                        <select formControlName="xcity" class="form-control">
+                          <option value="null" selected>Select City</option>
+                          <option value="Jaipur">Jaipur</option>
+                          <option value="Mumbai">Mumbai</option>
+                          <option value="Jodhpur">Jodhpur</option>
+                          <option value="Delhi">Delhi</option>
+                        </select>
+                      </div>
+
+                      <ng-container *ngIf="submitted">
+                        <ng-container *ngFor="let v of validationMessages.xcity">
+                          <p *ngIf="registerForm.get('xcity').hasError(v.type)" class="text-danger"
+                            [innerText]="v.message"></p>
+                        </ng-container>
+                      </ng-container>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary mt-4">Create Account</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

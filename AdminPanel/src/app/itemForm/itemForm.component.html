@@ -1,0 +1,87 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 *ngIf="isAdd" class="title">Add Item Form</h4>
+                        <h4 *ngIf="!isAdd" class="title">Edit Item Form</h4>
+                    </div>
+                    <div class="content">
+                        <form [formGroup]="itemForm" (ngSubmit)="itemInsert();">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Item Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter Item Name" formControlName="iname">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.iname">
+                                              <p *ngIf="itemForm.get('iname').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                               
+                                    <div class="form-group">
+                                        <label>Item Image</label>
+                                        <input type="file" class="form-control" placeholder="Enter Item Name" formControlName="file" (change)="onFileSelected($event)">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.file">
+                                                <p *ngIf="itemForm.get('file').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                            </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <input type="text" class="form-control" placeholder="Enter Item Name" formControlName="des">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.des">
+                                            <p *ngIf="itemForm.get('des').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                        </ng-container>
+                                    </ng-container>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Price</label>
+                                        <input type="text" class="form-control" placeholder="Enter Peice of Item" formControlName="price">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.price">
+                                              <p *ngIf="itemForm.get('price').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Quantity</label>
+                                        <input type="text" class="form-control" placeholder="Enter Quantity of Item" formControlName="qnty">
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.qnty">
+                                              <p *ngIf="itemForm.get('qnty').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                    <div class="form-group">
+                                        <label>Categories Name</label><br>
+                                        <select class="form-select col-sm-12 py-4 bg-light" formControlName="cate_name">
+                                            <option value="null" selected>Select Categories</option>
+                                            <option *ngFor="let cate of cateData;" value="{{cate._id}}">{{cate.cate_name}}</option>
+                                        </select>
+                                    </div>
+                                    <ng-container *ngIf="submitted">
+                                        <ng-container *ngFor="let v of validationMessages.cate_name">
+                                              <p *ngIf="itemForm.get('cate_name').hasError(v.type)" class="text-danger" [innerText]="v.message"></p>
+                                           </ng-container>
+                                    </ng-container>
+                                </div>
+                            </div>           
+                            <input type="submit"  *ngIf="isAdd" value="Insert"  class="btn btn-info btn-fill pull-right" />
+                            <input type="submit"  *ngIf="!isAdd" value="Update" class="btn btn-info btn-fill pull-right" />
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

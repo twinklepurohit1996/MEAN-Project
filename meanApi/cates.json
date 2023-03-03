@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "633577f221d3906dc6f7cf33"
+  },
+  "cate_name": "Computer",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664448498947"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665469798765"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633577f821d3906dc6f7cf39"
+  },
+  "cate_name": "Smatphone",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664448504696"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664448504696"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63450d88740a5d78bb133f75"
+  },
+  "cate_name": "Watchs",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665469832133"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665469832133"
+    }
+  },
+  "__v": 0
+}]
